@@ -12,23 +12,21 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
  button.addEventListener ('click', 
     function ()  {
 
-        let onOff = false;
         let i = 0;
 
-
-        do {
-            let currentSquare = createNewSquare (i + 1);
-   
-            gridDom.append(currentSquare);
-      
-           i++;
-
-        }   while ( i < 100);
-
-        if (i = 100) {
-            
-        }
+        gridDom.innerHTML = '';
         
+
+        while ( i < 100) {
+       
+        let currentSquare = createNewSquare (i + 1);
+   
+         gridDom.append(currentSquare);
+   
+        i++;
+        
+
+        }
 
     }
  
