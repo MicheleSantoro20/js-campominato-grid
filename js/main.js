@@ -9,19 +9,32 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 
  const button = document.getElementById ('playButton')
 
+ let numeroMassimoCaselle = 100;
+ 
+
  button.addEventListener ('click', 
     function ()  {
 
         let i = 0;
 
-        gridDom.innerHTML = '';
-        
 
-        while ( i < 100) {
+        gridDom.innerHTML = '';
+
+
+        while ( i < numeroMassimoCaselle) {
        
         let currentSquare = createNewSquare (i + 1);
    
          gridDom.append(currentSquare);
+
+
+         currentSquare.addEventListener ('click',
+            function () {
+                currentSquare.classList.remove ('square')
+                currentSquare.classList.add ('square-click')
+                console.log (currentSquare.innerHTML)
+            }
+         )
    
         i++;
         

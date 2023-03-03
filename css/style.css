@@ -56,6 +56,16 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+.square-click {
+    width: calc(800px / 10);
+    height: calc(800px / 10);
+    border: 1px solid black;
+    background-color: rgb(40, 170, 250);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .btn {
     display: flex;
